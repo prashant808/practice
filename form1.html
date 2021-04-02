@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style >
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		h1{
+			/*background-image: url(img_avatar2.png);*/
+			display: block;
+			float: center;
+			border: 5px solid black;
+			padding: 12px 20px 20px 10px;
+			margin: 90px;
+			height: 30%;
+			width: 40%;
+			background-color: grey;
+
+
+		}
+		img{
+
+		}
+		.form{
+			display: inline-flex;
+			border: 5px solid black;
+			padding: 22px 20px;
+			margin: 50px 30PX 30PX 50px;
+			width: 50%;
+			background-image: url(img.jpg);
+						background-repeat: no-repeat;
+			background-size: cover;
+			/*opacity: 0.4;*/
+
+		}
+				.form button{
+			color: red;
+			background-color: black;
+			width: 60%;
+			height: 5em;
+			opacity:1;
+			font-weight: bold;
+
+		}
+		.form button:hover{
+			color: white;
+			opacity: 0.7;
+			cursor: pointer;
+
+		}
+		#uname{
+			width: 80%;
+			height: 3em;
+			border: 1px solid black;
+		}
+		#pass{
+			width: 80%;
+			height: 3em;
+			border: 1px solid black;
+		}
+
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div><h1>  <img src="img_avatar2.png" width="100" height="100" style="flex-direction: left";>login form</h1></div>
+	<div class="form">	
+	
+	<form  onsubmit="return validate()" action="message.html">
+			<input type="text" id="uname" placeholder="username">
+			<label id="lbl" style="color: red; visibility: hidden;">invalid</label><br><br>
+		<input type="password"  id="pass" placeholder="password">
+		<label  id="lbl2" style="color:red; visibility: hidden;">invalid</label><br><br>
+		<button  type="submit">go </button>
+	</form>
+</div>
+
+<script>
+	function validate () {
+		var username = document.getElementById("uname");
+		var password = document.getElementById("pass");
+		if (username.value.trim() =="" ){
+			alert("no blank username");
+			document.getElementById("lbl").style.visibility = "visible";
+			document.getElementById("lbl2").style.visibility = "hidden";
+			password.style.border = "3px solid GREEN";
+			username.style.border = "5px solid red ";
+
+			return false;
+		}
+		else if (password.value.trim() =="") {
+			alert("no blank password");
+			document.getElementById("lbl2").style.visibility = "visible";
+			password.style.border = "3px solid red";
+			return false;
+			
+		}
+		else if (password.value.length<5) {
+			alert("too short password");
+			document.getElementById("lbl2").style.visibility = "visible";
+			password.style.border = "3px solid yellow";
+			return false;
+			
+		}
+		else{
+			return true;
+		}
+		// body... 
+	}
+</script>
+
+
+
+
+
+
+
+
+<!-- 	<script >
+		function validate(){
+		
+		var username = document.getElementById("name");
+			var password = document.getElementById("pass");
+			if(username.value =="") {
+				alert("no blank username");
+				// value.style.border = "red";
+				// document.getElementById("lbl").style.visibility = "visible";
+				return false;
+			}
+			else if(password.value == "") {
+				alert("no blank password");
+				return false;
+				
+			}
+			else if(password.value.length<5) {
+				alert("password too short ");
+				return false;
+				
+			}
+			else {
+				return true;
+			}
+		}
+	</script> -->
+</body>
+</html>

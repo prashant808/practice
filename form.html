@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<input id="text1" placeholder="username"><br><br>
+	<input type= "password"    id = "text2" placeholder="password"><br><br>
+
+	<button onclick="fn1()" id ="btn1";>click me </button>
+
+
+<script type="text/javascript">
+	function fn1() 
+	{
+		var pass = document.getElementById("text2").value;
+		var str = document.getElementById("text1").value;
+
+		if (str==pass) {
+			alert("your password and username matches " , );
+		}
+		else {
+			alert("your password does not match" );
+		}
+	}
+</script>
+</body>
+</html>

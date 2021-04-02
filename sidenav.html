@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport"  content="width = device-width , intial scale = 1">
+</head>
+<body>
+	<style >
+		body{
+			font-family: "roboto", sans-serif;
+		}
+.sidenav{
+	height: 100%;
+	width: 0;
+	background-color: #111;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transition: 0.5s;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.sidenav a{
+	padding: 8px 8px 8px 16px;
+	font-size: 25px;
+	text-decoration: none;
+	color:  #818181;
+	transition: 0.35s;
+	display: block;
+}
+
+.sidenav a:hover{
+	color: #f1f1f1;
+}
+
+.sidenav .closebtn{
+	position: absolute;
+	top: o;
+	right: 20px;
+	font-size: 25px;
+	margin-left: 50px;
+}
+@media screen(  max-height: 450px){
+	  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+
+}
+
+
+
+	</style>
+
+
+<div id="mysidenav"  class="sidenav">
+	<a href ="javascript:void(0)" class="closebtn"  onclick="closenav()">X </a>		
+	<a href="#">About </a>
+	<a href="#">services</a>
+	<a href="#">clients info</a>
+	<a href="#">contact</a>
+</div>
+<h2>Indovision services</h2>
+<span style= "font-size: 30px; cursor: pointer;"  onclick="opennav()"> &#9776;Menu</span>
+<script >
+	function opennav(){
+		document.getElementById("mysidenav").style.width="250px";
+
+	}
+
+	function closenav(){
+		document.getElementsById("mysidenav").style.width = "0";
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<select id="select">
+		<option  value="Prashant" > Prashant</option>
+		<option  value="vijay" > vijay</option>
+		<option  value="rakesh" > rakesh</option>
+		<option  value="anand" > anand</option>
+		<option  value="riya" > riya</option>
+		<option  value="anuj" > anuj</option>
+	</select><br>
+	<button  id="btn1"   onclick="fn1()" >
+		click me 
+	</button>
+	<script type="text/javascript">
+		function fn1(){
+			var select =document.getElementById("select");
+			alert(select.options[select.selectedIndex] .value  +  " " +"selected");
+		}
+	</script>
+
+
+
+	
+</body>
+</html>
