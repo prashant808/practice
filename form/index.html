@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="C:\wamp64\www\prashant\validation form\php_practice\css\bootstrap.min.css">
+	<title>Login form</title>
+	<style >
+		body{
+			font-family: sans-serif;
+
+		}
+input[type=text], input[type=password]{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+/*button{
+	background-color: green;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 30%;
+	border-radius: 80%;*/
+}
+button:hover{
+	opacity: 0.5;
+}
+
+.cancelbtn{
+	padding: 16px;
+	width: 30%;
+	background-color: red;
+}
+.imgcontainer{
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+img.avatar{
+	width: 40%;
+	border-radius: 50%;
+}
+.container{
+	padding : 16px;
+}
+span.psw{
+	float: right;
+	padding-top: 16px;
+}
+.modal{
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 60px;
+	display: none;
+
+}
+.modal-content{
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	border: 1px solid #888;
+	width: 50%;
+		background-image: url(v6_18.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+}
+.close{
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+.close:hover, .close:focus{
+	color: red;
+	cursor: pointer;
+}
+.animate{
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom{
+	from{-webkit-transform: initial-scale(0)}
+	to{-webkit-transform : scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media only screen and (max-width: 300px){
+	.modal,.imgcontainer {
+		width: auto;
+	} 
+}
+
+
+
+.navbar{
+	overflow: hidden;
+	background-color: black;
+
+}
+
+.navbar a{
+	font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+/*line-height: 28px;
+*/padding: 30px;
+margin: 22px;
+display: inline-block;
+
+color: #E5E5E5;
+
+}
+@media (min-width: 576px) { }
+
+@media (min-width: 768px) { }
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) {  }
+/*/*//*h2{
+
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 56px;
+text-align: center;
+
+color: #000000;
+
+border: 1px solid #000000;
+box-sizing: border-box;*/*/*/
+
+}*/
+/*img{
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+
+
+		display: block;
+}*/
+.btn{
+	position: absolute;
+width: 300px;
+height: 50px;
+left: 800px;
+top: 600px;
+
+}
+
+
+		</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg py-0 navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand    "   href="#">WELCOME</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">LOGIN</a>
+        </li>
+       <!--  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul> -->
+       <!--  </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+        
+        <div class="container-fluid    pt-5 " ></div>
+
+
+
+
+
+
+	<h2  class="display-3  text-center text-capitalize  bg-secondary" > Welcome to padha de yaar </h2><br>
+	<div class="text-center" >
+		<img class="rounded" src="img2.jpg"  >
+	</div>
+	<br>
+
+
+	<div class="text-center " >
+		<button  class="btn-success btn-outline-light btn-lg"  onclick="document.getElementById('id01').style.display = 'block'" >Login</button>
+</div>
+	<div id="id01"  class="modal">
+		<form class="modal-content animate" action="C:\Users\asus\Desktop\versions\index.html" method="post">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
+				<img src="img_avatar2.png" class="avatar">
+			</div>
+			<div class="container">
+				<label for="name"><b>username</b></label>
+				<input type="text" name="unmae" placeholder="enter your name " required>
+				<label for="psw"><b>password </b></label>
+				<input type="password" name="psw" placeholder="entr password" required>
+				<button  class="btn-success p-3" type="submit">login</button>
+				<label>
+					<input type="checkbox" checked="checked" name="remember">Remember me 
+				</label>
+			</div>
+			<div class="container" >
+				<button type ="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">cancel</button>
+				<span class="psw">forgot <a href="#">password?</a></span>
+			</div>
+		</form>
+	</div>
+	<script >
+		var modal = document.getElementById('id01');
+
+
+
+		window.onclick =function(event){
+			if (event.target == modal) {
+				modal.style.display = 'block';
+			}
+		}
+		window.onclick =function(event){
+			if (event.target == modal) {
+				modal.style.display = 'none';
+			}
+		}
+	</script>
+</body>
+</html>
