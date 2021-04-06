@@ -7,6 +7,7 @@
 	<style >
 		body{
 			font-family: sans-serif;
+
 		}
 input[type=text], input[type=password]{
 	width: 100%;
@@ -24,6 +25,7 @@ button{
 	border: none;
 	cursor: pointer;
 	width: 30%;
+	border-radius: 80%;
 }
 button:hover{
 	opacity: 0.5;
@@ -62,12 +64,17 @@ span.psw{
 	background-color: rgba(0,0,0,0.4);
 	padding-top: 60px;
 	display: none;
+
 }
 .modal-content{
 	background-color: #fefefe;
 	margin: 5% auto 15% auto;
 	border: 1px solid #888;
 	width: 50%;
+		background-image: url(v6_18.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			
 }
 .close{
 	position: absolute;
@@ -102,12 +109,78 @@ span.psw{
 	} 
 }
 
+
+
+.navbar{
+	overflow: hidden;
+	background-color: black;
+
+}
+
+.navbar a{
+	font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+/*line-height: 28px;
+*/padding: 30px;
+margin: 22px;
+display: inline-block;
+
+color: #E5E5E5;
+
+}
+h2{
+	/*left: 100px*/
+	
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 56px;
+text-align: center;
+
+color: #000000;
+
+border: 1px solid #000000;
+box-sizing: border-box;
+
+}
+img{
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+
+
+		display: block;
+}
+.btn{
+	position: absolute;
+width: 300px;
+height: 50px;
+left: 800px;
+top: 600px;
+
+}
+
+
 		</style>
 </head>
 
 <body>
-	<h2> modal login form </h2>
-	<button onclick="document.getElementById('id01').style.display = 'block'" style="width:auto;">Login</button>
+	<div class="navbar">
+		<a href="#" >HOME</a>
+		<a href="#"> Intro</a>
+		<a href="#">LOGIN</a>
+	</div>
+
+
+	<h2> Welcome to padha de yaar </h2><br>
+	<div class="img" >
+		<img src="img2.jpg"  >
+	</div>
+	<br>
+	
+	<button class="btn" onclick="document.getElementById('id01').style.display = 'block'" style="width:auto; text-align: center;">Login</button>
 	<div id="id01"  class="modal">
 		<form class="modal-content animate" action="C:\Users\asus\Desktop\versions\index.html" method="post">
 			<div class="imgcontainer">
@@ -124,7 +197,7 @@ span.psw{
 					<input type="checkbox" checked="checked" name="remember">Remember me 
 				</label>
 			</div>
-			<div class="container" style="background-color: #f1f1f1">
+			<div class="container" >
 				<button type ="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">cancel</button>
 				<span class="psw">forgot <a href="#">password?</a></span>
 			</div>
@@ -138,6 +211,11 @@ span.psw{
 		window.onclick =function(event){
 			if (event.target == modal) {
 				modal.style.display = 'block';
+			}
+		}
+		window.onclick =function(event){
+			if (event.target == modal) {
+				modal.style.display = 'none';
 			}
 		}
 	</script>
