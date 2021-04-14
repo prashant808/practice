@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="startTime()">
+	<!-- <h2>what can javascript do?</h2>
+	<p id="demo">javascript can change the html</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "hello javascript"'>click me </button> -->
+<!-- <h2>what can javascript do </h2>
+<p>javascript  can chnge html attribute values.</p>
+<button onclick="document.getElementById('myImage').src = 'bulbon.jpg'">turn on light</button>
+
+<img id="myImage" src="bulbof.jpg" style="width: 100px">
+<button onclick="document.getElementById('myImage').src='bulbof.jpg'" >turn lyt off</button>
+<script type="text/javascript">
+	document.writeln(6+8);
+	window.alert("welcome to js practice arena")
+</script> -->
+
+
+<!-- <p><input  id="c" onkeyup="convert('c')">DEgree celcius</p>
+<p><input  id="f" onkeyup="convert('f')">DEgree fahrenheit</p> -->
+<div id="txt"></div>
+<script type="text/javascript">
+	// var cars = ["volvo","audi","bmw"];
+	// document.getElementById('demo').innerHTML = cars[2];
+
+ // var person = {
+ // 	firstname : "john",
+ // 	age : 50,
+ // 	color : "brown munde"
+ // };
+ // document.getElementById('demo').innerHTML = person.firstname       +" is " + person.age +" year old and  " + person.color;
+// var person = {
+// 	firstname : "john",
+// 	lastname : "pie",
+// 	id : 45665,
+// 	fullname : function(){
+// 		return this.firstname +  " " + this.lastname;
+
+// 	}
+
+// };
+// document.getElementById('demo').innerHTML = person.fullname();
+// function convert(degree){
+// 	var x;
+// 	if (degree== "c") {
+// 		x= document.getElementById("c").value *9/5 +32;
+// 		document.getElementById("f").value = Math.round(x);
+// 	}else	{	x = (document.getElementById("f").value - 32) *5/9;
+// 		document.getElementById("c").value = Math.round(x);
+// 	}
+// }
+function startTime(){
+	var today =  new Date();
+	var h = today.getHours();
+	var m = today.getMinutes();
+	var s = today.getSeconds();
+	m = checkTime(m);
+	s =checkTime(s);
+	document.getElementById('txt').innerHTML = h+ ":"+ m + ":"+ s;
+	var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>
